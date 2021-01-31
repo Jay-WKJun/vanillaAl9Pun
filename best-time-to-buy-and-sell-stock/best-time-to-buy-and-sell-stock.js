@@ -11,29 +11,17 @@ const test1 = [7,1,5,3,6,4];
 const test2 = [7,6,4,3,1];
 
 var maxProfit = function(prices) {
-    const pricesMap = new Map([...prices.entries()]);
-    //min보다 늦으면서 가장 큰 값
-    let maxPrice = [100000000000,0];
-    //max 보다 앞서면서 가장 작은 값
-    let minPrice = [-1,10000000];
-    for (const [key, value] of pricesMap) {
-        if (minPrice[0] < key && minPrice[1] > value) {
-            if (maxPrice[0] > key && minPrice[1] !== value) {
-                minPrice = [key, value];
-            }
+    let min = Number.MAX_VALUE;
+    let maxprofit = 0;
+    for (let i = 0; i < prices.length; i++) {
+        if (min > prices[i]) {
+            min = prices[i];
         }
-        if (key > minPrice[0] && value > minPrice[1]) {
-            if (maxPrice[1] < value) {
-                maxPrice = [key, value];
-            }
+        if (prices[i] - min > maxprofit) {
+            maxprofit = prices[i] - min;
         }
     }
-    console.log(minPrice, maxPrice);
-
-    if (maxPrice[1] === 0) {
-        return 0;
-    }
-    return maxPrice[1] - minPrice[1];
+    return maxprofit;
 };
 
 console.log("answer",maxProfit(test1));
