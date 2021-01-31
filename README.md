@@ -14,11 +14,11 @@ Vanilla 9기 coder 들의 algorithm repository입니다!
 # 21.1.31
 ### 공통문제 : https://programmers.co.kr/learn/courses/30/lessons/42579
 - 키워드 : `hash`, `object`
-- Committed Branches : `wookyungjun`, `SeongjuSeo`, 
+- Committed Branches : `wookyungjun`, `SeongjuSeo`, `minwooKim`,
 
 ### 문제 : https://leetcode.com/problems/maximum-depth-of-n-ary-tree/submissions/
 - 키워드 : `BFS`, `DFS`, `Recursion(재귀)`, `recurse-start-from-leaf`
-- Committed Branches : `wookyungjun(MaximumDepthofN-aryTree)`,
+- Committed Branches : `wookyungjun(MaximumDepthofN-aryTree)`, `minwooKim(maximum_depth_of_tree)`,
 - 참고하면 좋을 영상 : https://www.youtube.com/watch?v=-m154rqFQng&list=PLjSkJdbr_gFY8VgactUs6_Jc9Ke8cPzZP&index=10
 (완전히 같지는 않으나 재귀방법을 배울 수 있습니다.)
 
