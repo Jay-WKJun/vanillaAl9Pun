@@ -1,3 +1,5 @@
+// https://programmers.co.kr/learn/courses/30/lessons/17686 (파일명정렬)
+
 // 입력: [img12.png, img10.png, img02.png, img1.png, IMG01.GIF, img2.JPG]
 // 출력: [img1.png, IMG01.GIF, img02.png, img2.JPG, img10.png, img12.png]
 
