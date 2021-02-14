@@ -33,7 +33,7 @@ Vanilla 9기 coder 들의 algorithm repository입니다!
 
 # 2021.02.14
 ### 공통문제 : https://programmers.co.kr/learn/courses/30/lessons/43163 (단어변환)
-- 키워드 : **Compare : `charAt`, `split->splice->join`, `for`**,
-**BFS : `shift`**, **DFS : `pop`**, **Recursion**
+- 키워드 : **Compare : `charAt` `split->splice->join`  `for`** /
+**BFS : `shift`** / **DFS : `pop`**, **Recursion**
 - Committed Branches : `Parksoyoon`, 
 
