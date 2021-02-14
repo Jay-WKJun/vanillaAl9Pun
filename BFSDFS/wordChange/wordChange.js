@@ -33,7 +33,6 @@ const words4 = ['cog', 'dog', 'hot', 'dot', 'lot', 'log'];
 
 function solution(begin, target, words) {
   // 다돌았는데 target과 일치하지 않음 = 0 리턴
-  // (틀림...) => 엣지케이스가 뭐가 있지...
   // target 언어가 있어도 도달할 수 없다면 0이 리턴되야함
   let changeCount = 0;
   let beginCopy = begin.substring(0);
