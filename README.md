@@ -18,22 +18,22 @@ Vanilla 9기 coder 들의 algorithm repository입니다!
 
 ### 문제 : https://leetcode.com/problems/maximum-depth-of-n-ary-tree/submissions/
 - 키워드 : `BFS`, `DFS`, `Recursion(재귀)`, `recurse-start-from-leaf`
-- Committed Branches : `wookyungjun(MaximumDepthofN-aryTree)`, `minwooKim(maximum_depth_of_tree)`,
+- Committed Branches : `wookyungjun(MaximumDepthofN-aryTree)`, `minwooKim(maximum_depth_of_tree)`, `SeongjuSeo`
 - 참고하면 좋을 영상 : https://www.youtube.com/watch?v=-m154rqFQng&list=PLjSkJdbr_gFY8VgactUs6_Jc9Ke8cPzZP&index=10
 (완전히 같지는 않으나 재귀방법을 배울 수 있습니다.)
 
 # 2021.02.07
 ### 공통문제 : https://programmers.co.kr/learn/courses/30/lessons/17686 (파일명 정렬)
 - 키워드 : `regex`, `sorting`
-- Committed Branches : `Parksoyoon`,
+- Committed Branches : `Parksoyoon`, `SeongjuSeo`
 
 ### 문제 : https://leetcode.com/problems/maximum-depth-of-n-ary-tree/ (559. Maximum Depth of N-ary Tree)
 - 키워드 : `Recursion`
-- Committed Branches : 
+- Committed Branches : `SeongjuSeo`
 
 # 2021.02.14
 ### 공통문제 : https://programmers.co.kr/learn/courses/30/lessons/43163 (단어변환)
 - 키워드 : **Compare : `charAt` `split->splice->join`  `for`** /
 **BFS : `shift`** / **DFS : `pop`** / **Recursion**
-- Committed Branches : `Parksoyoon`, 
+- Committed Branches : `Parksoyoon`, `SeongjuSeo`
 
