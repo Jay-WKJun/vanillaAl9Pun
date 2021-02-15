@@ -14,7 +14,7 @@ Vanilla 9기 coder 들의 algorithm repository입니다!
 # 2021.01.31
 ### 공통문제 : https://programmers.co.kr/learn/courses/30/lessons/42579
 - 키워드 : `hash`, `object`
-- Committed Branches : `wookyungjun`, `SeongjuSeo`, `minwooKim`,
+- Committed Branches : `wookyungjun`, `SeongjuSeo`, `minwooKim`, `sungjinkim`
 
 ### 문제 : https://leetcode.com/problems/maximum-depth-of-n-ary-tree/submissions/
 - 키워드 : `BFS`, `DFS`, `Recursion(재귀)`, `recurse-start-from-leaf`
