@@ -39,6 +39,6 @@ Vanilla 9기 coder 들의 algorithm repository입니다!
 
 # 2021.02.21
 ### 공통문제 : https://programmers.co.kr/learn/courses/30/lessons/42861 (섬 연결하기)
-- 키워드 : **Compare : `Greedy` ** /
+- 키워드 : `Greedy` /
 - Committed Branches : `minwooKim`,
 
