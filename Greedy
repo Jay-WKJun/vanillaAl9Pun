@@ -1,0 +1,80 @@
+// 프로그래머스 문제: 섬 연결하기
+// https://programmers.co.kr/learn/courses/30/lessons/42861
+
+function getHomeIsland(list, key) {
+    if (list[key] === key) {
+        return key;
+    }
+    return getHomeIsland(list, list[key]);
+}
+
+function makeConnection(list, a, b) {
+    let newList = {...list};
+    let islandA = getHomeIsland(list, a);
+    let islandB = getHomeIsland(list, b);
+    
+    if (islandA < islandB) {
+        for (const island in newList) {
+            if (newList[island] === islandB) {  
+              newList[island] = islandA;
+            }
+        }
+    } else {
+        for (const island in newList) {
+            if (newList[island] === islandA) {
+            newList[island] = islandB
+            }
+        }
+    }
+    
+    return newList;
+}
+
+function getIsConnected(list, a, b) {
+    let islandA = getHomeIsland(list, a);
+    let islandB = getHomeIsland(list, b);
+    
+    if (islandA === islandB) {
+        return true;
+    }
+    return false;
+}
+
+function solution(n, costs) {
+    let results = 0;
+    let islands = {};
+    let bridges = 0;
+    let costsInOrder = costs.sort((a, b) => {
+        islands[a[0]] = a[0];
+        islands[a[1]] = a[1];
+        
+        if (a[2] > b[2]) {
+            return 1;
+        } 
+        if (a[2] < b[2]) {
+            return -1;
+        }
+        if (a[2] === b[2]) {
+            return 0;
+        }
+    });
+    
+    for (let i = 0; i < costsInOrder.length; i++) {
+        const cost = costsInOrder[i];
+        const islandA = cost[0];
+        const islandB = cost[1];
+        
+        const isConnected = getIsConnected(islands, islandA, islandB);
+        
+        if (isConnected) {
+            continue;
+        }
+        islands = makeConnection(islands, islandA, islandB);
+        results += cost[2];
+        bridges++;
+        
+    }
+    
+    return results;
+    
+}
