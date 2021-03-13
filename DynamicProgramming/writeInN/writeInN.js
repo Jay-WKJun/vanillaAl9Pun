@@ -58,3 +58,85 @@ function nRecursion(N, total, count, numberBefore, targetNum) {
 
 console.log(solution(N1, number1));
 console.log(solution(N2, number2));
+
+/*
+  실패케이스 (시간초과)
+
+  const memoize = new Map();
+
+function solution(N, number) {
+  var answer = 0;
+  answer = nRecursion(N, 0, 0, N, number);
+  return answer;
+}
+
+function nRecursion(N, total, count, numberBefore, targetNum) {
+  // 성공케이스
+  if (total === targetNum) {
+    return count;
+  }
+
+  // 실패케이스
+  if (count > 8 || total > targetNum) {
+    return;
+  }
+
+  // 숫자를 합쳐서 다음으로 넘어가는 경우
+  const combinatedNum = (numberBefore * 10) + N;
+  const combReturn = nRecursion(N, total, count, combinatedNum, targetNum);
+
+  // 덧, 뺄, 곱, 나 한번씩
+  const sumReturn = nRecursion(N, total + N, count + 1, N, targetNum);
+  const subReturn = nRecursion(N, total - N, count + 1, N, targetNum);
+  const mulReturn = nRecursion(N, total * N, count + 1, N, targetNum);
+  const divReturn = nRecursion(N, total / N, count + 1, N, targetNum);
+
+  // 다 해서 오는 애들 중에 가장 count가 적은걸 return
+  return Math.min(combReturn, sumReturn, subReturn, mulReturn, divReturn);
+}
+*/
+
+/* Java
+  성공한 코드
+class Solution {
+  public int solution(int N, int number) {
+  int answer = -1;
+      List<Set<Long>> arr = new ArrayList<>();
+
+      arr.add(null);
+      arr.add(new HashSet<>());
+
+      arr.get(1).add(new Long(N));
+
+      for(int i=1; i<8; i++){
+          if(i>=2){
+              arr.add(new HashSet<>());
+
+              StringBuilder num = new StringBuilder();
+              for(int j=0;j<i;j++) {
+                  num.append(N);
+              }
+              arr.get(i).add(Long.parseLong(num.toString()));
+
+              for(int j=1; j<i; j++ ){               
+                  for(long k : arr.get(j)){
+                      for(long l : arr.get(i-j)){
+                          arr.get(i).add(k+l);
+                          arr.get(i).add(k-l);
+                          arr.get(i).add(k*l);
+                          if(l!=0){
+                              arr.get(i).add(k/l);
+                          }
+                      }
+                  }
+              }                
+          }
+
+          if(arr.get(i).contains((long)number)){
+              return i;
+          }
+      }
+      return answer;
+  }
+}
+*/

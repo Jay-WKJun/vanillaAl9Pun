@@ -1,7 +1,3 @@
-# 21.1.31
+# 오답노트 로그
 
-- 문제 : MaximumDepthofN-aryTree
-
-https://leetcode.com/problems/maximum-depth-of-n-ary-tree/submissions/
-
-BFS, DFS, Recursion(재귀)
+틀린거 반복하는 횟수 여기다가 체크
