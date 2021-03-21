@@ -75,3 +75,71 @@ const numberTree = {
 
 const testDigit1 = "234";
 console.log(letterCombinations(testDigit1));
+
+/*
+stack을 이용한 DFS풀이법
+
+stack에 node를 넣어가면서 깊게 계속 들어감, child가 없으면
+reduce로 stack안의 value값을 모두 합쳐주고 마지막것은 pop()
+나머지는 아무 작용도 없이 작업이 끝나면 pop()을 하면
+가장 마지막 child만 글자를 만들어 push함 = 내것과 같음
+
+const digitToLetter = {
+    1: [""],
+    2: ["a", "b", "c"],
+    3: ["d", "e", "f"],
+    4: ["g", "h", "i"],
+    5: ["j", "k", "l"],
+    6: ["m", "n", "o"],
+    7: ["p", "q", "r", "s"],
+    8: ["t", "u", "v"],
+    9: ["w", "x", "y", "z"],
+};
+class Node {
+	constructor(value) {
+		this.value = value;
+		this.children = [];
+        this.isVisited= false;
+	};
+	addToLast(...childs) {
+		if (this.children.length < 1) {
+            this.children = [...childs.map(each => new Node(each))];
+            return;
+        }
+        this.children.forEach(each => {
+            each.addToLast(...childs);
+        });
+	};
+};
+var letterCombinations = function(digits) {
+    const length = digits.length;
+    if (!digits) {
+        return [];
+    }
+    if (digits.length === 1) {
+        return digitToLetter[digits];
+    }
+    let root = new Node("");
+    for (let i = 0; i < digits.length; i++) {
+        let letters = digitToLetter[digits[i]];
+        root.addToLast(...letters);
+    }
+    const stack = [root];
+    const result = [];
+    let eachResult = "";
+    while (stack.length) {
+        const lastNode = stack[stack.length - 1];
+        const nextNode = lastNode.children.find(node => !node.isVisited);
+        if (nextNode) {
+            nextNode.isVisited = true
+            stack.push(nextNode);
+            continue;
+        }
+        stack.forEach(each => eachResult += each.value);
+        result.push(eachResult);
+        eachResult = "";
+        stack.pop();
+  }
+    return result.filter(each => each.length === length);
+};
+*/
